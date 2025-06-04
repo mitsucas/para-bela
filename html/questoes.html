@@ -6,19 +6,26 @@
   <title>Isabela</title>
   <link rel="shortcut icon" href="/images/pixil-frame-0 (1).png" type="image/x-icon">
   <link rel="stylesheet" href="/styles/questoes.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 </head>
 <body>
-  <div class="principal">
-    <main>
-      <div class="pergunta-caixa">
-        <h1 id="questao">Você gosta de mim?</h1>
-        <div class="botoes">
-          <button class="botao" id="sim" onclick="proximaPergunta()">Sim</a></button>
-          <button class="botao" id="nao" onmouseover="fugir()" onclick="window.locate.href='/html/nao-supremo.html'">Não</></button>
+  <section>
+    <div class="bg-fundo">
+      <video src="/videos/lis.mp4" autoplay loop muted></video>
+    </div>
+    <div class="principal">
+      <main>
+        <div class="pergunta-caixa">
+          <h1 id="questao">Você gosta de mim?</h1>
+          <div class="botoes">
+            <button class="botao" id="sim" onclick="proximaPergunta()"><i class="fi fi-br-check"></i> Sim</a></button>
+            <button class="botao" id="nao" onmouseover="fugir()" onclick="window.locate.href='/html/nao-supremo.html'"> <i class="fi fi-br-cross"></i> Não</button>
+          </div>
         </div>
-      </div>
-    </main>
-  </div>
+      </main>
+    </div>
+  </section>
           <script>
             const perguntas = [
               "Você me ama?",
@@ -39,7 +46,10 @@
               } else {
                 document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
                 <h1>Quer namorar comigo?</h1>
-                <button class="botao" id="sim" onclick="respostaFinal()">Sim!</a></button>
+                <div class="botoes">
+                <button class="botao" id="sim-final" onclick="respostaFinal()"> <span><img src="/videos/undefined - Imgur.gif" loop width="30px"></span> Sim!</a></button>
+                <button class="botao" id="nao" onmouseover="fugir()"> Não</button>
+                </div>
                 `;
               }
             }
@@ -48,8 +58,10 @@
               document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
               <h1>Agora vai contar para a verdadeira Isabele que escreveu isso!!</h1>
               <p>E tem um presente, é pouca coisa, mas fiz de coração...</p>
-              <button class="botao" id="voltar" onclick="voltarInicio()">Voltar</a></button>
-              <a href="/fonts/mini-poema.txt" download="mini-poema.txt" type="text.txt" class="botao">Presente!</a>
+              <div class="botoes">
+              <button class="botao" id="voltar" onclick="voltarInicio()">Início</a></button>
+              <a href="/fonts/mini-poema.txt" download="mini-poema.txt" type="text.txt" class="botao" id="presente" >Presente!</a>
+              </div>
               `;
             }
 
