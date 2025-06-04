@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabela</title>
+  <link rel="shortcut icon" href="/images/pixil-frame-0 (1).png" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/questoes.css">
+</head>
+<body>
+  <div class="principal">
+    <main>
+      <div class="pergunta-caixa">
+        <h1 id="questao">Você gosta de mim?</h1>
+        <div class="botoes">
+          <button class="botao" id="sim" onclick="proximaPergunta()">Sim</a></button>
+          <button class="botao" id="nao" onmouseover="fugir()" onclick="window.locate.href='/html/nao-supremo.html'">Não</></button>
+        </div>
+      </div>
+    </main>
+  </div>
+          <script>
+            const perguntas = [
+              "Você me ama?",
+              "Você me ama mesmo se eu fosse uma mancha de óleo?",
+              "Você é apaixonada por mim?",
+              "Você me ama mesmo sendo lerdo?",
+              "Você me ama mesmo que eu demore pra assistir as coisas?",
+              "Você falaria Munguzá por mim?",
+              "Você quer mesmo ter alguma coisa comigo..?"
+            ];
+            let etapa = 0;
+
+            function proximaPergunta(){
+              etapa++;
+              const perguntaElemento = document.getElementById('questao');
+              if (etapa < perguntas.length){
+                perguntaElemento.textContent = perguntas[etapa];
+              } else {
+                document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
+                <h1>Quer namorar comigo?</h1>
+                <button class="botao" id="sim" onclick="respostaFinal()">Sim!</a></button>
+                `;
+              }
+            }
+
+            function respostaFinal(){
+              document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
+              <h1>Agora vai contar para a verdadeira Isabele que escreveu isso!!</h1>
+              <p>E tem um presente, é pouca coisa, mas fiz de coração...</p>
+              <button class="botao" id="voltar" onclick="voltarInicio()">Voltar</a></button>
+              <a href="/fonts/mini-poema.txt" download="mini-poema.txt" type="text.txt" class="botao">Presente!</a>
+              `;
+            }
+
+            function voltarInicio() {
+              window.location.href = "index.html";
+            }
+            function fugir(){
+              const botao = document.getElementById('nao');
+              const larguraTela = window.innerWidth - 100; // subtrai tamanho do botão
+              const alturaTela = window.innerHeight - 50;
+              const novaPosX = Math.floor(Math.random() * larguraTela);
+              const novaPosY = Math.floor(Math.random() * alturaTela);
+              botao.style.position = "absolute";
+              botao.style.left = novaPosX + "px";
+              botao.style.top = novaPosY + "px";
+            }
+          </script>
+</body>
+</html>
