@@ -46,10 +46,12 @@
                 perguntaElemento.textContent = perguntas[etapa];
               } else {
                 document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
-                <h1>Quer namorar comigo?</h1>
-                <div class="botoes">
-                <button class="botao" id="sim-final" onclick="respostaFinal()"> <span><img src="./videos/undefined - Imgur.gif" loop width="30px"></span> Sim!</a></button>
-                <button class="botao" id="nao" onmouseover="fugir()"> Não</button>
+                <div class="pergunta-caixa">
+                  <h1 class="q">Quer namorar comigo?</h1>
+                  <div class="botoes">
+                  <button class="botao" id="sim-final" onclick="respostaFinal()"> <span><img src="./videos/undefined - Imgur.gif" loop width="30px"></span> Sim!</a></button>
+                  <button class="botao" id="nao"> Não</button>
+                  </div>
                 </div>
                 `;
               }
@@ -57,11 +59,13 @@
 
             function respostaFinal(){
               document.getElementsByClassName('pergunta-caixa')[0].innerHTML = `
-              <h1>Agora vai contar para a verdadeira Isabele que escreveu isso!!</h1>
-              <p>E tem um presente, é pouca coisa, mas fiz de coração...</p>
-              <div class="botoes">
-              <button class="botao" id="voltar" onclick="voltarInicio()">Início</a></button>
-              <a href="./fonts/mini-poema.txt" download="mini-poema.txt" type="text.txt" class="botao" id="presente" >Presente!</a>
+              <div class="pergunta-caixa">
+                <h1 class="q">Agora vai contar para a verdadeira Isabele que escreveu isso!!</h1>
+                <p>E tem um presente, é pouca coisa, mas fiz de coração...</p>
+                <div class="botoes">
+                  <button class="botao" id="voltar" onclick="voltarInicio()">Início</a></button>
+                  <a href="./fonts/mini-poema.txt" download="mini-poema.txt" type="text.txt" class="botao" id="presente" >Presente!</a>
+                </div>
               </div>
               `;
             }

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'HelvetiHand';
-  src: url('https://mitsucas.github.io/para-bela/fonts/HelvetiHand.ttf') format('truetype');
+  src: url('../fonts/HelvetiHand.ttf') format('truetype');
 }
 /*geral*/
 html, body{
@@ -150,10 +150,10 @@ div.texto{
   line-height: 2em;
 }
 
-/*perguntas.html*/
-
-
 /*questoes.html*/
+#questao,.q{
+  text-align: center;
+}
 button.botao{
   padding: 10px;
   font-family: HelvetiHand, sans-serif;
