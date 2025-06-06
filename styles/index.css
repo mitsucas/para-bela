@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @font-face {
-  font-family: HelvetiHand;
-  src: url('/fonts/HelvetiHand.ttf') format(truetype);
+  font-family: 'HelvetiHand';
+  src: url('/fonts/HelvetiHand.ttf') format('truetype');
 }
-
+/*geral*/
 html, body{
   height: 100%;
   margin: 0%;
@@ -40,6 +40,7 @@ section div.bg-fundo video{
 }
 
 section div.principal{
+  flex-wrap: wrap;
   position: absolute;
   z-index: 1;
   width: 300px;
@@ -57,7 +58,7 @@ section div.principal{
 
 div.pergunta-caixa{
   text-align: center;
-  font-family: HelvetiHand, sans-serif;
+  font-family: 'HelvetiHand', sans-serif;
 }
 h1{
   text-align: justify;
@@ -72,12 +73,87 @@ div.botoes{
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 10px;
+  align-items: center;
 }
-
 .botao{
   color: black;
   text-decoration: none;
 }
+a.botao{
+  padding: 10px;
+  font-family: 'HelvetiHand', sans-serif;
+  font-size: medium;
+  border: none;
+}
+a.botao:hover{
+  color: rgb(255, 0, 0);
+}
+i{
+  padding: 5px;
+  background-color: #939393;
+  border-radius: 100%;
+}
+
+/*não.html*/
+div.caixa{
+  text-align: center;
+}
+div.imagem{
+  padding: 20px;
+}
+div.botao{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.voltar{
+  color: black;
+  text-decoration: none;
+}
+a.voltar{
+  padding: 10px;
+  font-family: HelvetiHand, sans-serif;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+}
+a.voltar:hover{
+  color: red;
+}
+
+/*res.html*/
+section div.principal-res{
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 1;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.texto{
+  text-align: center;
+  font-family: HelvetiHand, sans-serif;
+}
+.mensagem{
+  margin-bottom: 30px;
+}
+.texto>.mensagem{
+  text-align: justify;
+  line-height: 2em;
+}
+
+/*perguntas.html*/
+
+
+/*questoes.html*/
 button.botao{
   padding: 10px;
   font-family: HelvetiHand, sans-serif;
@@ -91,4 +167,19 @@ i{
   padding: 5px;
   background-color: #939393;
   border-radius: 100%;
+}
+button#sim-final{
+  color: white;
+  border-radius: 10px;
+  background-color: #000000;
+  text-align: center;
+}
+button#sim-final:hover{
+  color: blue;
+}
+#presente:hover{
+  color: red;
+}
+#voltar{
+  margin-top: 5px;
 }
