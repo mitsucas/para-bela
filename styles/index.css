@@ -126,7 +126,8 @@ section div.principal-res{
   flex-wrap: wrap;
   position: absolute;
   z-index: 1;
-  width: 500px;
+  min-width: 320px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 
@@ -182,11 +183,4 @@ button#sim-final:hover{
 }
 #voltar{
   margin-top: 5px;
-}
-
-@media (max-width: 700px){
-  div.principal-res{
-    flex-wrap: wrap;
-    width: 200px;
-  }
 }
