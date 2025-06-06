@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'HelvetiHand';
-  src: url('../fonts/HelvetiHand.ttf') format('truetype');
+  src: url('https://mitsucas.github.io/para-bela/fonts/HelvetiHand.ttf') format('truetype');
 }
 /*geral*/
 html, body{
