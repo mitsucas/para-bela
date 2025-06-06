@@ -183,3 +183,10 @@ button#sim-final:hover{
 #voltar{
   margin-top: 5px;
 }
+
+@media (max-width: 700px){
+  div.principal-res{
+    flex-wrap: wrap;
+    width: 200px;
+  }
+}
