@@ -74,18 +74,38 @@ div.botoes{
   justify-content: space-evenly;
   margin-bottom: 10px;
   align-items: center;
+  /*
+  transition: all 0.35s;
+  box-sizing: border-box; */
 }
+/*
+div.botoes:hover{
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0.5em 0em #5e5e5e;
+  border-color: #5e5e5e;
+  color: #5e5e5e;
+}*/
+
 .botao{
   color: black;
   text-decoration: none;
 }
 a.botao{
+  transition: all 0.35s;
+  box-sizing: border-box;
+
   padding: 10px;
   font-family: 'HelvetiHand', sans-serif;
   font-size: medium;
   border: none;
 }
 a.botao:hover{
+  border-radius: 10px;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0.5em 0em #5e5e5e;
+  border-color: #5e5e5e;
+  color: #5e5e5e;
+
   color: rgb(255, 0, 0);
 }
 i{
@@ -153,15 +173,25 @@ div.texto{
 
 /*questoes.html*/
 #questao,.q{
+  font-size: 1.5em;
   text-align: center;
 }
 button.botao{
+  transition: all 0.35s;
+  box-sizing: border-box;
+
   padding: 10px;
   font-family: HelvetiHand, sans-serif;
   font-size: medium;
   border: none;
 }
 button.botao:hover{
+  border-radius: 10px;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0.5em 0em #5e5e5e;
+  border-color: #5e5e5e;
+  color: #5e5e5e;
+
   color: rgb(255, 0, 0);
 }
 i{
@@ -175,6 +205,8 @@ button#sim-final{
   background-color: #000000;
   text-align: center;
 }
+
+
 button#sim-final:hover{
   color: blue;
 }

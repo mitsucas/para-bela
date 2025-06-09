@@ -61,7 +61,7 @@
                   <h1 class="q">Quer namorar comigo?</h1>
                   <div class="botoes">
                   <button class="botao" id="sim-final" onclick="respostaFinal()"> <span><img src="./videos/undefined - Imgur.gif" loop width="30px"></span> Sim!</a></button>
-                  <button class="botao" id="nao"> Não</button>
+                  <button class="botao" id="nao" onclick="fechar()"> Não</button>
                   </div>
                 </div>
                 `;
@@ -93,6 +93,10 @@
               botao.style.position = "absolute";
               botao.style.left = novaPosX + "px";
               botao.style.top = novaPosY + "px";
+            }
+
+            function fechar(){
+              window.close()
             }
           </script>
 </body>
