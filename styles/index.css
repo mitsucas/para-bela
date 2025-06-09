@@ -176,6 +176,9 @@ div.texto{
   font-size: 1.5em;
   text-align: center;
 }
+p{
+  padding-bottom: 10px;
+}
 button.botao{
   transition: all 0.35s;
   box-sizing: border-box;
@@ -201,7 +204,6 @@ button#sim-final{
   background-color: #000000;
   text-align: center;
 }
-
 
 button#sim-final:hover{
   font-weight: bold;
